@@ -9,11 +9,12 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #2c3e50; /* Изменен цвет фона */
+            color: #ecf0f1; /* Изменен цвет текста */
         }
 
         header {
-            background-color: #333;
+            background-color: #3498db; /* Изменен цвет заголовка */
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -23,7 +24,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #34495e; /* Изменен цвет фона основной области */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -36,33 +37,38 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #333;
+            background-color: #e74c3c; /* Изменен цвет кнопки */
             color: #fff;
             border: none;
             border-radius: 5px;
+            transition: background-color 0.3s ease; /* Добавлено плавное изменение цвета при наведении */
         }
-        </style>
-        </head>
-        <body>
-        <header>
-        <h1>Dynamic Website</h1>
-        </header>
-        <main>
-        <div id="content">
+
+        button:hover {
+            background-color: #c0392b; /* Изменен цвет кнопки при наведении */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Dynamic Website</h1>
+</header>
+<main>
+    <div id="content">
         <p>Welcome to the dynamic website!</p>
         <button id="changeContent">Change Content</button>
-        </div>
-        </main>
-        <script>
-         document.addEventListener('DOMContentLoaded', function () {
-            var contentDiv = document.getElementById('content');
-            var changeContentButton = document.getElementById('changeContent');
+    </div>
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var contentDiv = document.getElementById('content');
+        var changeContentButton = document.getElementById('changeContent');
 
         changeContentButton.addEventListener('click', function () {
             var newContent = '<p>Content changed dynamically!</p>';
             contentDiv.innerHTML = newContent;
         });
-        });
-        </script>
-        </body>
-        </html>
+    });
+</script>
+</body>
+</html>
