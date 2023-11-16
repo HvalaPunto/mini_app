@@ -64,7 +64,7 @@
         var updateTimeBtn = document.getElementById('updateTimeBtn');
 
         function fetchCurrentTime() {
-            fetch('http://worldtimeapi.org/api/timezone/Europe/Istanbul')
+            fetch('https://worldtimeapi.org/api/timezone/Europe/Istanbul')
                 .then(response => response.json())
                 .then(data => {
                     var currentTime = new Date(data.utc_datetime);
