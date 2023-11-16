@@ -84,6 +84,28 @@
             fetchCurrentTime();
         });
     });
+    function saveAndDisplay() {
+        // Get the input value
+        const inputValue = document.getElementById('userData').value;
+        // Save the input value to local storage
+        localStorage.setItem('userInput', inputValue);
+        // Display the input value
+        displayData();
+    }
+    // Function to display data
+    function displayData() {
+        // Retrieve the stored value from local storage
+        const storedValue = localStorage.getItem('userInput');
+        // Display the stored value
+        const displayElement = document.getElementById('displayData');
+        displayElement.textContent = `Stored Value: ${storedValue || 'No data stored.'}`;
+    }
+    // Call the displayData function when the page loads to show any existing data
+    displayData();
 </script>
+<label for="userData">Enter Data:</label>
+<input type="text" id="userData">
+<button onclick="saveAndDisplay()">Save and Display</button>
+<p id="displayData"></p>
 </body>
 </html>
