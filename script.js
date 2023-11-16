@@ -1,4 +1,9 @@
-// JavaScript для обработки нажатия на кнопку
-document.getElementById("myButton").addEventListener("click", function() {
-    document.getElementById("message").innerHTML = "Привет, мир!";
+document.addEventListener('DOMContentLoaded', function () {
+    var contentDiv = document.getElementById('content');
+    var changeContentButton = document.getElementById('changeContent');
+
+    changeContentButton.addEventListener('click', function () {
+        var newContent = '<p>Content changed dynamically!</p>';
+        contentDiv.innerHTML = newContent;
+    });
 });
