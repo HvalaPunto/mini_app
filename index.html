@@ -57,6 +57,11 @@
 <main>
     <div id="timeDisplay">Current time will be displayed here</div>
     <button id="updateTimeBtn">Update Time</button>
+
+    <label for="userData">Enter Data:</label>
+    <input type="text" id="userData">
+    <button onclick="saveAndDisplay()">Save and Display</button>
+    <p id="displayData"></p>
 </main>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -83,6 +88,8 @@
         updateTimeBtn.addEventListener('click', function () {
             fetchCurrentTime();
         });
+        // Call the displayData function when the page loads to show any existing data
+        displayData();
     });
     function saveAndDisplay() {
         // Get the input value
@@ -100,12 +107,8 @@
         const displayElement = document.getElementById('displayData');
         displayElement.textContent = `Stored Value: ${storedValue || 'No data stored.'}`;
     }
-    // Call the displayData function when the page loads to show any existing data
-    displayData();
+
 </script>
-<label for="userData">Enter Data:</label>
-<input type="text" id="userData">
-<button onclick="saveAndDisplay()">Save and Display</button>
-<p id="displayData"></p>
+
 </body>
 </html>
