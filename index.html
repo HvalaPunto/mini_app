@@ -26,7 +26,9 @@
         <label for="public-key">Public Key:</label>
         <input type="text" id="public-key-right">
         <br>
-        <button onclick="triggerPayment()">Trigger a Subscription Payment</button>
+        <!-- Добавим id к кнопке -->
+        <button id="trigger-payment-button" onclick="triggerPayment()">Trigger a Subscription Payment</button>
+
     </div>
 </div>
 
@@ -49,14 +51,8 @@
 </div>
 
 <div class="logs-container">
-    <div class="logs">
-        <h2>Left Logs</h2>
-        <div id="log-left"></div>
-    </div>
-    <div class="logs">
-        <h2>Right Logs</h2>
-        <div id="log-right"></div>
-    </div>
+    <div class="logs" id="log-left"></div>
+    <div class="logs" id="log-right"></div>
 </div>
 
 <script src="script.js"></script>

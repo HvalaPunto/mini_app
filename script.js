@@ -1,14 +1,9 @@
-function subscribeLeft() {
-    // Implement subscription logic for the left section
-    // You can access the input values using document.getElementById('elementId').value
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function greet(name) {
+    return "Hello, ".concat(name, "!");
 }
+var result = greet('World');
+console.log(result);
 
-function subscribeRight() {
-    // Implement subscription logic for the right section
-    // You can access the input values using document.getElementById('elementId').value
-}
 
-function triggerPayment() {
-    // Implement logic to trigger a subscription payment
-    // You can access the input values using document.getElementById('elementId').value
-}

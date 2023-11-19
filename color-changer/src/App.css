@@ -1,0 +1,31 @@
+/* src/App.css */
+.App {
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.side-container {
+  width: 40%;
+}
+
+.settings-container {
+  margin-top: 20px;
+}
+
+.logs-container {
+  display: flex;
+  justify-content: space-around;
+  height: 50vh; /* Задаем высоту 50% от высоты экрана */
+}
+
+.logs {
+  width: 45%; /* Ширина лог-контейнера */
+  overflow-y: auto; /* Добавляем скролл, если логов больше, чем вмещается в контейнер */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
